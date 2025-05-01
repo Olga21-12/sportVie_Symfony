@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur SportVie !{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Pourquoi le sport est important ?</h1>
+            <p>Le sport est essentiel pour une vie saine : il améliore le bien-être mental, la condition physique et favorise la discipline et le travail en équipe.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ asset('images/sport.jpg') }}" class="img-fluid" alt="Bienfaits du sport">
+        </div>
+    </div>
+</div>
+{% endblock %}
