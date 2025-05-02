@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 01 2025 г., 10:35
+-- Время создания: Май 02 2025 г., 07:17
 -- Версия сервера: 8.3.0
 -- Версия PHP: 8.2.18
 
@@ -43,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `sports` (
 --
 
 INSERT INTO `sports` (`id`, `nom`, `regles`, `temp_de_jeu`, `image`, `created_at`) VALUES
-(1, 'Yoga', 'Le yoga est une discipline millénaire qui combine des postures physiques (asanas), des exercices de respiration (pranayama) et de la méditation. Il vise à harmoniser le corps et l’esprit, à améliorer la souplesse, la concentration et à réduire le stress.', 90, 'C:\\cfitech\\SportVie\\img\\1689342282522.png', '2025-05-01 10:29:57'),
-(2, 'TRX', 'Le TRX est un entraînement en suspension utilisant le poids du corps. Il sollicite tous les groupes musculaires à travers des mouvements fonctionnels et améliore la force, l’endurance, la stabilité et la coordination. Il se pratique à l’aide de sangles accrochées à un point fixe.', 60, 'C:\\cfitech\\SportVie\\img\\Screenshot_1.png', '2025-05-01 10:29:57'),
-(3, 'Stretching', 'Le stretching est une méthode douce d\'étirement musculaire. Il permet d\'améliorer la souplesse, de prévenir les blessures et de favoriser la récupération après l\'effort. Il peut être statique, dynamique ou actif selon les objectifs.', 60, 'C:\\cfitech\\SportVie\\img\\4_5.jpg', '2025-05-01 10:32:28'),
-(4, 'Fitness', 'Le fitness regroupe différentes activités physiques visant à améliorer la condition physique générale : cardio, renforcement musculaire, coordination, souplesse. Il se pratique en salle ou à domicile, en cours collectif ou en individuel.', 45, 'C:\\cfitech\\SportVie\\img\\depositphotos_25079259-stock-illustration-illustration-a-fat-man-and.jpg', '2025-05-01 10:32:28'),
-(5, 'Natation', 'La natation est un sport complet qui sollicite l’ensemble des muscles. Elle se pratique en piscine ou en eau libre, en loisir ou en compétition. Elle améliore la respiration, l’endurance et ménage les articulations grâce à la portance de l’eau.', 60, 'C:\\cfitech\\SportVie\\img\\polza-rannego-plavan.jpg', '2025-05-01 10:34:57');
+(1, 'Yoga', 'Le yoga est une discipline millénaire qui combine des postures physiques (asanas), des exercices de respiration (pranayama) et de la méditation. Il vise à harmoniser le corps et l’esprit, à améliorer la souplesse, la concentration et à réduire le stress.', 90, 'https://timeweb.com/ru/community/article/ec/ec9f053c89759ba116771cdddcd2127c.jpg', '2025-05-01 10:29:57'),
+(2, 'TRX', 'Le TRX est un entraînement en suspension utilisant le poids du corps. Il sollicite tous les groupes musculaires à travers des mouvements fonctionnels et améliore la force, l’endurance, la stabilité et la coordination. Il se pratique à l’aide de sangles accrochées à un point fixe.', 60, 'https://artofsport.com.ua/wp-content/uploads/2018/06/Petli-dlya-funktsionalnogo-treninga-Rising-CE6500B-1.jpg', '2025-05-01 10:29:57'),
+(3, 'Stretching', 'Le stretching est une méthode douce d\'étirement musculaire. Il permet d\'améliorer la souplesse, de prévenir les blessures et de favoriser la récupération après l\'effort. Il peut être statique, dynamique ou actif selon les objectifs.', 60, 'https://cdn.notinoimg.com/detail_main_lq/always/4015400684428_05/infinity-normal-size-1___240625.jpg', '2025-05-01 10:32:28'),
+(4, 'Fitness', 'Le fitness regroupe différentes activités physiques visant à améliorer la condition physique générale : cardio, renforcement musculaire, coordination, souplesse. Il se pratique en salle ou à domicile, en cours collectif ou en individuel.', 45, 'https://cs11.pikabu.ru/post_img/big/2020/08/25/11/159837862918843089.jpg', '2025-05-01 10:32:28'),
+(5, 'Natation', 'La natation est un sport complet qui sollicite l’ensemble des muscles. Elle se pratique en piscine ou en eau libre, en loisir ou en compétition. Elle améliore la respiration, l’endurance et ménage les articulations grâce à la portance de l’eau.', 60, 'https://images.squarespace-cdn.com/content/v1/62eb9b795e55531c83266df3/1662647894401-SPEWE7E8O6JKWGTDDYVM/Capture+d%E2%80%99%C3%A9cran+2022-09-08+%C3%A0+16.36.14.png', '2025-05-01 10:34:57');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
