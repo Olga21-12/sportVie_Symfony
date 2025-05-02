@@ -1,0 +1,40 @@
+{# Наследуем шаблон base.html.twig, где подключены Bootstrap и структура страницы #}
+{% extends 'base.html.twig' %}
+
+{# Заголовок страницы во вкладке браузера #}
+{% block title %}{{ sport.nom }} | SportVie{% endblock %}
+
+{# Основное содержимое страницы #}
+{% block body %}
+<div class="container py-5">
+
+    <div class="row">
+        {# Левая колонка с текстовой информацией о спорте #}
+        <div class="col-md-7">
+            <h1 class="mb-4">{{ sport.nom }}</h1> {# Отображаем название вида спорта #}
+
+            <p><strong>Description :</strong></p>
+            <p>{{ sport.regles }}</p> {# Описание из БД #}
+
+            <p><strong>Durée moyenne :</strong> {{ sport.tempDeJeu }} minutes</p> {# Продолжительность #}
+
+            <a href="{{ path('sport_index') }}" class="btn btn-outline-secondary mt-4">
+                ← Retour à la liste des sports
+            </a> {# Кнопка возврата на страницу со списком видов спорта #}
+        </div>
+
+        {# Правая колонка с изображением #}
+        <div class="col-md-5">
+            {% if sport.image %}
+                <img src="{{ sport.image }}"
+                     alt="{{ sport.nom }}"
+                     class="img-fluid rounded shadow">
+                {# Подгружаем изображение из папки public/uploads/sports/ #}
+            {% else %}
+                <p class="text-muted">Aucune image disponible pour ce sport.</p>
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}

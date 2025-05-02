@@ -1,20 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SportController!{% endblock %}
+{% block title %}Types de sport{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/cfitech/SportVie/src/Controller/SportController.php</code></li>
-        <li>Your template at <code>C:/cfitech/SportVie/templates/sport/index.html.twig</code></li>
-    </ul>
+    <div class="container mt-4">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1>Les types de sport</h1>
+            <p class="lead">
+                Le sport joue un rôle essentiel dans notre santé physique et mentale. Chaque discipline apporte ses propres bienfaits :
+                la <strong>yoga</strong> favorise la détente et la souplesse, le <strong>TRX</strong> renforce le corps en profondeur,
+                le <strong>stretching</strong> améliore la mobilité, le <strong>fitness</strong> stimule l'endurance et la <strong>natation</strong> travaille tout le corps sans impact articulaire.
+            </p>
+            <ul class="list-group mt-4">
+                {% for sport in sports %}
+                    <li class="list-group-item">
+                        <a href="{{ path('sport_show', {'id': sport.id}) }}">{{ sport.nom }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/sport2.jpg') }}" alt="sports" class="img-fluid rounded">
+        </div>
+    </div>
 </div>
 {% endblock %}

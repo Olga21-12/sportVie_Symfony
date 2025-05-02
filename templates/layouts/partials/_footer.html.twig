@@ -1,14 +1,14 @@
-<footer class="bg-dark text-white text-center py-3">
-<nav class="nav-footer">
-            <ul class="nav-footer-list">
-                <li>
-                    <a class="nav-link {{app.current_route == 'home' ? 'active' : ''}}" href={{ path('home') }}>Accueil</a>
-                </li>
-               
-                
-            </ul>
-        </nav>
+<footer class="bg-dark text-white py-3 position-relative">
+    <nav class="d-flex justify-content-center mb-2">
+        <ul class="nav list-unstyled mb-0">
+            <li class="nav-item">
+                <a class="nav-link px-3 text-white {{ app.current_route == 'home' ? 'active' : '' }}" href="{{ path('home') }}">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3 text-white {{ app.current_route == 'sport_index' ? 'active' : '' }}" href="{{ path('sport_index') }}">Types de sport</a>
+            </li>
+        </ul>
+    </nav>
 
-        <span class="text-muted">&copy; 2025 Olga&SportVie. Tous droits réservés.</span>
-    
+    <span class="position-absolute end-0 bottom-0 pe-3 pb-1 text-white small">&copy; 2025 Olga&amp;SportVie. Tous droits réservés</span>
 </footer>

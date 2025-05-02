@@ -1,21 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ path('home') }}">SportVie</a>
-    <div class="collapse navbar-collapse">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link {% if app.request.attributes.get('_route') == 'home' %}active{% endif %}" href="{{ path('home') }}">Accueil</a>
+          <a class="nav-link {{ app.current_route == 'home' ? 'active' : '' }}" href="{{ path('home') }}">Accueil</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {% if app.request.attributes.get('_route') starts with 'sport' %}active{% endif %}" href="#" data-bs-toggle="dropdown">Sport</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ path('sport_show', {'id': 1}) }}">Yoga</a></li>
-            <li><a class="dropdown-item" href="{{ path('sport_show', {'id': 2}) }}">TRX</a></li>
-            <li><a class="dropdown-item" href="{{ path('sport_show', {'id': 3}) }}">Stretching</a></li>
-            <li><a class="dropdown-item" href="{{ path('sport_show', {'id': 4}) }}">Fitness</a></li>
-            <li><a class="dropdown-item" href="{{ path('sport_show', {'id': 5}) }}">Natation</a></li>
-          </ul>
-        </li>
+        <li class="nav-item">
+  <a class="nav-link {% if app.request.attributes.get('_route') starts with 'sport' %}active{% endif %}" href="{{ path('sport_index') }}">Types de sport</a>
+</li>
+
       </ul>
     </div>
   </div>
